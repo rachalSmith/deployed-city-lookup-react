@@ -1,0 +1,35 @@
+.average-calculation {
+  grid-area: average-calculation;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "heading"
+    "av-score"
+    "info-link";
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+}
+
+.av-score-heading {
+  grid-area: "heading";
+  font-size: 26px;
+}
+
+.av-score {
+  grid-area: "av-score";
+  border: solid #00C9A7;
+  font-size: 26px;
+  width: 150px;
+  height: 150px;
+  line-height: 150px; /* same as height to vertically allign */
+  border-radius: 50%;
+  margin: auto;
+}
+
+.info-link {
+   grid-area: "info-link";
+}
