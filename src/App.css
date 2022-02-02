@@ -1,3 +1,5 @@
+/* Main container styles and media queries */
+
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
 
 * {
@@ -6,11 +8,9 @@
   padding: 0;
 }
 
-
 body {
   font-family: 'Archivo', sans-serif;
 }
-
 
 .container {
   display: grid;
@@ -23,7 +23,6 @@ body {
     "data-container data-container";
   text-align: center;
 }
-
 
 .data-container {
   display: grid;
@@ -56,56 +55,61 @@ body {
   .average-calculation {
     padding-bottom: 1vh;
   }
-}
-
-@media only screen and (max-width: 1150px) {
-  .data-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr;
-    gap: 0px 0px;
-    grid-auto-flow: column;
-    grid-template-areas:
-      "radar-chart"
-      "average-calculation";
-    gap: 5%;
-    justify-self: center;
-    margin-bottom: 6%;
-  }
 
   .radar-chart-container {
-    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
   }
 
-  .average-calculation {
-    max-width: 70vw;
-    min-height: 55vh;
+  .radar-chart-title {
+    padding-bottom: 3.5vh;
   }
+}
 
-  .instructions {
-    margin-top: 0%;
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    grid-template-columns: 1fr 0.33fr;
+    grid-template-rows: 1.4fr 0.15fr 0.15fr 0.6fr;
   }
 
   .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
+    box-sizing: border-box;
     padding-bottom: 0%;
-    height: 99%;
+    height: 100%;
+    width: 100%;
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 0.33fr;
-    grid-template-rows: 0.7fr 0.15fr 0.15fr 0.6fr;
-  }
-}
-
-@media only screen and (max-width: 800px) {
   .header {
     font-size: 1.5em;
     letter-spacing: 2px;
-    line-height: 150%;
+    line-height: 160%;
+    position: relative;
+    z-index: 2;
+    top: 50%;
+  }
+
+  .av-score-heading {
+    padding-top: 3.5vh;
+  }
+
+  .radar-chart-title {
+    padding-bottom: 1vh;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .radar-chart-title {
+    padding-top: 1vh;
+    padding-bottom: 1.5vh;
+    font-size: 20px;
+  }
+
+  .av-score-heading {
+    font-size: 20px;
   }
 
   .instructions {
@@ -117,27 +121,129 @@ body {
     margin-bottom: 3%;
   }
 
-  .search-button {
-    font-size: 14px;
-  }
-
-  .radar-chart-container {
-    max-width: 70vw;
-  }
-
-  .average-calculation {
-    max-width: 70vw;
-    min-height: 50vh;
+  .arrow {
+    width: 7%;
   }
 }
 
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 650px) {
+  .container {
+    grid-template-columns: 1fr 0.33fr;
+    grid-template-rows: 1fr 0.1fr 0.1fr 2fr;
+  }
+
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 80%;
+    gap: 5%;
+  }
+
+  .av-score-heading {
+    padding-bottom: 4vh;
+  }
+
+  .info-link {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 140%;
+  }
+}
+
+
+
+@media only screen and (max-width: 420px) {
+  .container {
+    grid-template-columns: 1fr 0.22fr;
+    grid-template-rows: 1fr 0.1fr 0.1fr 2.5fr;
+  }
+
   .header {
-    font-size: 1em;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    line-height: 160%;
+    position: relative;
+    z-index: 2;
+    top: 30%;
   }
 
   .instructions {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .input-field {
+    height: 30px;
+    width: 100%;
+  }
+
+  .input-field-container {
+    padding-left: 6%;
+    padding-bottom: 2vh;
+  }
+
+  .search-button {
+    font-size: 12px;
+    font-weight: 600;
+    height: 35px;
+    width: 40px;
+    margin-top: 0.7vh;
+    margin-left: 5%;
+  }
+
+  .suggestion-container {
+    width: 92%;
+    margin-left: 1%;
+  }
+
+  .suggestions {
+    font-size: 15px;
+  }
+
+  .radar-chart-container {
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+  }
+
+  .radar-chart-title {
     font-size: 16px;
+  }
+
+  .radar-chart {
+    font-size: 12px;
+    padding-top: 2vh;
+  }
+
+  .average-calculation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .av-score-heading {
+    font-size: 16px;
+  }
+
+  .av-score {
+    font-size: 16px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* same as height to vertically allign */
+    border-radius: 50%;
+  }
+
+  .info-link {
+    padding-top: 2vh;
+     font-size: 11px;
   }
 }
 

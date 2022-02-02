@@ -15,11 +15,6 @@
   margin-top: 23px;
 }
 
-  /* @media (min-width: 768px) {
-    .search-button {
-      padding: 19px 32px;
-    }
-  } */
 
 .search-button:before,
 .search-button:after {
