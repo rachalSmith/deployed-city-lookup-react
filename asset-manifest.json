@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/deployed-city-lookup-react/static/css/main.9f831c99.css",
+    "main.css": "/deployed-city-lookup-react/static/css/main.ed825c8e.css",
     "main.js": "/deployed-city-lookup-react/static/js/main.a527e94e.js",
     "static/js/787.28cb0dcd.chunk.js": "/deployed-city-lookup-react/static/js/787.28cb0dcd.chunk.js",
-    "static/media/rio-de-janeiro.jpg": "/deployed-city-lookup-react/static/media/rio-de-janeiro.994cf36e578730f2b3f6.jpg",
+    "static/media/rio-de-janeiro-lg.jpg": "/deployed-city-lookup-react/static/media/rio-de-janeiro-lg.8b90405ccc93a0784804.jpg",
     "index.html": "/deployed-city-lookup-react/index.html",
-    "main.9f831c99.css.map": "/deployed-city-lookup-react/static/css/main.9f831c99.css.map",
+    "main.ed825c8e.css.map": "/deployed-city-lookup-react/static/css/main.ed825c8e.css.map",
     "main.a527e94e.js.map": "/deployed-city-lookup-react/static/js/main.a527e94e.js.map",
     "787.28cb0dcd.chunk.js.map": "/deployed-city-lookup-react/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f831c99.css",
+    "static/css/main.ed825c8e.css",
     "static/js/main.a527e94e.js"
   ]
 }
